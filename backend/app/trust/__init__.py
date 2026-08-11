@@ -1,0 +1,1 @@
+"""MarketTrust AI — Trust package."""
