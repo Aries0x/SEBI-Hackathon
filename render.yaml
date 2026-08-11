@@ -37,7 +37,7 @@ services:
     startCommand: npm start
     envVars:
       - key: NEXT_PUBLIC_API_URL
-        value: https://markettrust-backend.onrender.com
+        value: https://markettrust-backend.onrender.com/api
       - key: NODE_ENV
         value: production
     autoDeploy: true
