@@ -14,14 +14,11 @@ services:
       - key: APP_DEBUG
         value: "false"
       - key: FRONTEND_URL
-        fromService:
-          name: markettrust-frontend
-          type: web
-          property: url
+        value: https://markettrust-frontend.onrender.com
       - key: CORS_ORIGINS
         value: '["https://markettrust-frontend.onrender.com"]'
       - key: GROQ_API_KEY
-        sync: false  # You'll set this manually in the Render dashboard
+        sync: false
       - key: GROQ_MODEL
         value: llama-3.3-70b-versatile
       - key: LLM_PROVIDER
@@ -40,10 +37,7 @@ services:
     startCommand: npm start
     envVars:
       - key: NEXT_PUBLIC_API_URL
-        fromService:
-          name: markettrust-backend
-          type: web
-          envVarKey: RENDER_EXTERNAL_URL
+        value: https://markettrust-backend.onrender.com
       - key: NODE_ENV
         value: production
     autoDeploy: true
